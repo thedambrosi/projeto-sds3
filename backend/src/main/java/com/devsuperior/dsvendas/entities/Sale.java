@@ -17,7 +17,7 @@ public class Sale {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private Integer Visited;
+	private Integer visited;
 	private Integer deals;
 	private Double amount;
 	private LocalDate date;
@@ -31,7 +31,7 @@ public class Sale {
 
 	public Sale(Long id, Integer visited, Integer deals, Double amount, LocalDate date, Seller seller) {
 		this.id = id;
-		Visited = visited;
+		this.visited = visited;
 		this.deals = deals;
 		this.amount = amount;
 		this.date = date;
@@ -47,12 +47,12 @@ public class Sale {
 		this.id = id;
 	}
 
-	public Integer getViseted() {
-		return Visited;
+	public Integer getVisited() {
+		return visited;
 	}
 
 	public void setVisited(Integer visited) {
-		Visited = visited;
+		this.visited = visited;
 	}
 
 	public Integer getDeals() {
@@ -86,4 +86,6 @@ public class Sale {
 	public void setSeller(Seller seller) {
 		this.seller = seller;
 	}
+
+
 }

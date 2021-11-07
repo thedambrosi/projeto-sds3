@@ -7,7 +7,7 @@ import com.devsuperior.dsvendas.entities.Sale;
 public class SaleDTO {
 	
 	private Long id;
-	private Integer Visited;
+	private Integer visited;
 	private Integer deals;
 	private Double amount;
 	private LocalDate date;
@@ -20,7 +20,7 @@ public class SaleDTO {
 
 	public SaleDTO(Long id, Integer visited, Integer deals, Double amount, LocalDate date, SellerDTO seller) {
 		this.id = id;
-		this.Visited = visited;
+		this.visited = visited;
 		this.deals = deals;
 		this.amount = amount;
 		this.date = date;
@@ -28,12 +28,13 @@ public class SaleDTO {
 	}
 	public SaleDTO(Sale entity) {
 		id = entity.getId();
-		Visited = entity.getViseted();
+		visited = entity.getVisited();
 		deals = entity.getDeals();
 		amount = entity.getAmount();
 		date = entity.getDate();
-		seller = new SellerDTO( entity.getSeller());
+		seller = new SellerDTO(entity.getSeller());
 	}
+	
 
 	public Long getId() {
 		return id;
@@ -43,12 +44,12 @@ public class SaleDTO {
 		this.id = id;
 	}
 
-	public Integer getViseted() {
-		return Visited;
+	public Integer getVisited() {
+		return visited;
 	}
 
-	public void setViseted(Integer viseted) {
-		Visited = viseted;
+	public void setVisited(Integer visited) {
+		 this.visited = visited;
 	}
 
 	public Integer getDeals() {
